@@ -82,4 +82,4 @@ class AdminUser: UserManager {
  admin.registerUser(username: "mada", email: "mada@gmail.com", password: "_apassowrd")
  print("User count: \(admin.userCount)")
  print("All user count: \(admin.listAll())")
- *ß/
+ */
