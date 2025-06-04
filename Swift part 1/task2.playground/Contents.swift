@@ -1,10 +1,17 @@
 //import UIKit
 public func isBalancedParentheses(input: String) -> Bool {
-    if (input.filter {$0 == "("}.count == input.filter {$0 == ")"}.count)
-    {
-        return true
+    var counter = 0
+    for char in input {
+        if char == "(" {
+            counter += 1
+        } else if char == ")" {
+            counter -= 1
+            if counter < 0 {
+                return false
+            }
+        }
     }
-return false
+return counter == 0
 }
-//print(isBalancedParentheses(input: "())("))
+//print(isBalancedParentheses(input: ")("))
 
